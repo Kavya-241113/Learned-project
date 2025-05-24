@@ -1,0 +1,113 @@
+/* App.module.css */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.saveBtn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+.saveBtn1 {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.noteList {
+  list-style: none;
+  padding: 0;
+}
+
+.noteItem {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.noteDate {
+  font-size: 12px;
+  color: #666;
+}
+
+.noteActions button {
+  margin-right: 10px;
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.exportBtn {
+  background-color: #28a745;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.dark .exportBtn {
+  background-color: #3cba54;
+}
+
+.dark {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark textarea,
+.dark input {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+.toggleBtn {
+  background-color: #222;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border: 1px solid #444;
+}
