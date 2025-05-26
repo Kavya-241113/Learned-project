@@ -5,14 +5,14 @@ import styles from './App.module.css';
 
 export default function App() {
   const dispatch = useDispatch();
+  
   const notes = useSelector(state => state.notes.notes);
 
-  const today = new Date().toISOString().split('T')[0];
+   const today = new Date().toISOString().split('T')[0];
   const todayNote = notes.find(n => n.date === today);
   const [input, setInput] = useState('');
   const [editId, setEditId] = useState(null);
   const [editContent, setEditContent] = useState('');
-  const [searchTerm, setSearchTerm] = useState('');
   const [darkMode, setDarkMode] = useState(false);
 
   const handleAdd = () => {
@@ -48,7 +48,6 @@ export default function App() {
       <button className={styles.toggleBtn} onClick={() => setDarkMode(prev => !prev)}>
         {darkMode ? ' Light Mode' : ' Dark Mode'}
       </button>
-
       <label className={styles.label}>What did you learn today?</label>
       <textarea
         className={styles.textarea}
@@ -66,8 +65,7 @@ export default function App() {
       </button>
       {todayNote && <p className={styles.label}>You've already submitted today's note.</p>}
 
-    
-
+  
       <div style={{ marginTop: '15px' }}>
         <button className={styles.exportBtn} onClick={handleExportJSON}>Export as JSON</button>
       </div>
@@ -75,8 +73,8 @@ export default function App() {
       <h2 className={styles.heading}>Your Notes</h2>
 
       <ul className={styles.noteList}>
-        {notes
-      .filter(note => note.content.toLowerCase().includes(searchTerm.toLowerCase()))
+        {[...notes]
+      
       .sort((a, b) => (a.date < b.date ? 1 : -1))
           .map(note => (
             <li key={note.id} className={styles.noteItem}>
